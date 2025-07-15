@@ -1,15 +1,17 @@
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, ScrollView } from 'react-native'
 import React, { Component } from 'react'
 import Header from './components/Header';
 import HeroImage from './components/HeroImage';
+import Body from './components/Body';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Header />
         <HeroImage />
-      </View>
+        <Body />
+      </ScrollView>
     )
   }
 };
@@ -17,7 +19,5 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   }
 });
